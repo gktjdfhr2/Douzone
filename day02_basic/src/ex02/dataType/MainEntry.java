@@ -1,4 +1,4 @@
-package ex01.basic;
+package ex02.dataType;
 
 public class MainEntry {
 	
