@@ -7,6 +7,6 @@ public class QuizSecond {
 		int minute;
 		int second;
 		System.out.println("시 : " + su / 3600 + " 분 : " +  su % 3600 / 60 + " 초 : " + su % 3600 % 60);
-		//
+		
 	}
 }
