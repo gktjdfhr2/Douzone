@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Calculator {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in)
-		int su1 = sc.nextInt()
+		Scanner sc = new Scanner(System.in);
+		int su1 = sc.nextInt();
 		int su2 = sc.nextInt();
 		char input = sc.next();
 		

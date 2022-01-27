@@ -1,4 +1,4 @@
-package quiz;
+package day03.quiz;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

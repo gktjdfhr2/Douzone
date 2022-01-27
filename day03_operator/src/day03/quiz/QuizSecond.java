@@ -1,4 +1,4 @@
-package quiz;
+package day03.quiz;
 
 public class QuizSecond {
 	public static void main(String[] args) {

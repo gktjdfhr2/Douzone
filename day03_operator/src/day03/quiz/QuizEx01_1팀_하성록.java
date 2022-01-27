@@ -1,6 +1,6 @@
-package quiz;
+package day03.quiz;
 
-public class QuizEx01 {
+public class QuizEx01_1팀_하성록 {
 	public static void main(String[] args) {
 		// %, / 산술연산자를 이용한 계산 결과 출력하기
 		//월급
