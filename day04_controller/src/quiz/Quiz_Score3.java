@@ -1,11 +1,11 @@
 package quiz;
 
 import java.util.Scanner;
-// Á¡¼ö´Â 0~100Á¡ »çÀÌ°ª¸¸ ÀÔ·Â ¹Þ±â
-//  y/n ? ¿øÇÏ´Â ¸¸Å­ ÀÔ·Â¹Þ±â
-public class Quiz_Score {
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0~100ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Þ±ï¿½
+//  y/n ? ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Å­ ï¿½Ô·Â¹Þ±ï¿½
+public class Quiz_Score3 {
 	public static void main(String[] args) {
-		// ¼ºÀûÇ¥ ±¹¾î, ¿µ¾î, Àü»ê, ÀÌ¸§ ÀÔ·Â ¹Þ¾Æ¼­ ÃÑÁ¡, Æò±Õ
+		// ï¿½ï¿½ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½ ï¿½Þ¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½
 		Scanner sc = new Scanner(System.in);
 		char check=' ';
 		String name;
@@ -23,23 +23,23 @@ public class Quiz_Score {
 			avg = 0;
 			
 			
-			System.out.print("ÀÌ¸§ :");
+			System.out.print("ï¿½Ì¸ï¿½ :");
 			name = sc.next();
 			
 			do {
-			System.out.print("±¹¾î :");
+			System.out.print("ï¿½ï¿½ï¿½ï¿½ :");
 			score = sc.nextInt();
 			kor = score;
 			} while(score > 100 || score <0);
 			
 			do {			
-			System.out.print("¿µ¾î :");		
+			System.out.print("ï¿½ï¿½ï¿½ï¿½ :");		
 			score = sc.nextInt();
 			eng = score;
 			} while(score > 100 || score <0);
 			
 			do {
-			System.out.print("Àü»ê :");
+			System.out.print("ï¿½ï¿½ï¿½ï¿½ :");
 			score = sc.nextInt();
 			com = score;
 			} while(score > 100 || score <0);
@@ -48,28 +48,28 @@ public class Quiz_Score {
 			
 			sum = kor + eng + com;
 			avg = (double)sum / 3;
-			System.out.println("ÀÌ¸§ : " + name + "\n±¹¾î : " + kor + "\n¿µ¾î : " + eng + "\nÀü»ê : " + com + "\nÃÑÁ¡ : " + sum + "\nÆò±Õ : " + avg);
+			System.out.println("ï¿½Ì¸ï¿½ : " + name + "\nï¿½ï¿½ï¿½ï¿½ : " + kor + "\nï¿½ï¿½ï¿½ï¿½ : " + eng + "\nï¿½ï¿½ï¿½ï¿½ : " + com + "\nï¿½ï¿½ï¿½ï¿½ : " + sum + "\nï¿½ï¿½ï¿½ : " + avg);
 			int data = (int)avg/10;
 			
 			switch (data) {
 			
 				case 10:
-					System.out.println("ÇÐÁ¡ : A+");			
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ : A+");			
 					break;
 				case 9:
-					System.out.println("ÇÐÁ¡ : A");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ : A");
 					break;
 				case 8:
-					System.out.println("ÇÐÁ¡ : B+");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ : B+");
 					break;
 				case 7:
-					System.out.println("ÇÐÁ¡ : B");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ : B");
 					break;
 				case 6:
-					System.out.println("ÇÐÁ¡ : C+");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ : C+");
 					break;
 				case 5:
-					System.out.println("ÇÐÁ¡ : C");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ : C");
 					break;	
 			}
 			
@@ -86,9 +86,9 @@ public class Quiz_Score {
 				System.out.println("avg4 = " + avg);
 				grade = 'F';
 			}
-			System.out.println("ÇÐÁ¡ : " + grade);
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ : " + grade);
 			
-			System.out.println("°è¼Ó / Á¾·á ( y / n )");
+			System.out.println("ï¿½ï¿½ï¿½ / ï¿½ï¿½ï¿½ï¿½ ( y / n )");
 			check = sc.next().charAt(0);
 			if(check == 'n' || check == 'N') {
 				System.out.println("exit");
