@@ -15,11 +15,11 @@ public class ArrayQuiz {
 				cnt++;			
 			}
 		}
-		System.out.println("7 ����:" + cnt);
+		System.out.println("7 개수:" + cnt);
 		
 		//문제2]기상청
 		//	1월의 평균 강수량을 구하는 프로그램을 작성 (단 30일 기준)
-		//
+		//	
 		int[] arr = new int[30];
 		int sum = 0;
 		double avg = 0;

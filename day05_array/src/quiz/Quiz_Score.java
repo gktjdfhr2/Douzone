@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Quiz_Score {
+	static Scanner sc = new Scanner(System.in);
 	static class Student implements Comparable<Student>{
 		private String name;
 		private int kor, eng, com, sum;
@@ -19,7 +20,19 @@ public class Quiz_Score {
 			this.sum = kor + eng + com;
 			this.avg = (double)sum/3;
 			setGrade(this.avg);
-
+		}
+		public Student() {
+			
+		}
+		public void input() {
+			System.out.println("이름을 입력하세요 : ");
+			this.name = sc.next();
+			System.out.println("국어점수를 입력하세요 : ");
+			this.kor = sc.nextInt();
+			System.out.println("영어점수를 입력하세요 : ");
+			this.eng = sc.nextInt();			
+			System.out.println("전산점수를 입력하세요 : ");
+			this.com = sc.nextInt();
 		}
 		
 		public String getName() {
@@ -55,8 +68,11 @@ public class Quiz_Score {
 		public double getAvg() {
 			return avg;
 		}
-		public void setAvg(double avg) {
-			this.avg = avg;
+		public void total(int x, int y, int z) {
+			this.sum = x + y + z;
+		}
+		public void avg(int sum, int y) {
+			this.avg = sum / 3;
 		}
 		
 		public char getGrade() {
@@ -106,16 +122,12 @@ public class Quiz_Score {
 		String name="";
 		int kor = 0, eng = 0, com = 0;
 		int cnt = 0; 
-		while(cnt < st.length) {//			
-			System.out.print("이름입력:");
-			name =sc.next();
-			System.out.print("국어점수:");
-			kor =sc.nextInt();
-			System.out.print("영어점수:");
-			eng =sc.nextInt();
-			System.out.print("전산점수:");
-			com =sc.nextInt();
-			st[cnt] = new Student(name, kor, eng, com);
+		while(cnt < st.length) {//	
+			st[cnt] = new Student();
+			st[cnt].input();
+			st[cnt].total(st[cnt].getKor(), st[cnt].getEng(), st[cnt].getCom());
+			st[cnt].avg(st[cnt].getSum(), 3);
+			st[cnt].setGrade(st[cnt].getAvg());
 			System.out.println();
 			if(kor < 0 || kor > 100 || eng < 0 || eng > 100 || com < 0 || com > 100)
 				System.out.println("점수를 정상적으로 입력해주세요");
