@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-class Customer{
+class Customers{
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	private String name, addr, number;
 
@@ -68,11 +68,11 @@ public class Quiz_Customer {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));		
 		int cnt;
 		int man=0;
-		Customer[] cs = new Customer[100];
-		Customer update = new Customer();
+		Customers[] cs = new Customers[100];
+		Customers update = new Customers();
 		String name=""; 
 		
-		ArrayList<Customer> lists = new ArrayList<>();		
+		ArrayList<Customers> lists = new ArrayList<>();		
 		while(true) {
 			System.out.print("원하시는 기능을 입력하세요(1: 고객 추가, 2: 고객 삭제, 3: 고객 리스트 출력, 4: 고객 정보 수정, 5: 프로그램 종료 ");
 			cnt = Integer.parseInt(br.readLine()); 
@@ -80,7 +80,7 @@ public class Quiz_Customer {
 			switch (cnt) {
 			case 1:
 				System.out.println("------------- 고객 추가-------------");
-				cs[man] = new Customer();
+				cs[man] = new Customers();
 				cs[man].addCustomer();
 				lists.add(cs[man]);
 				System.out.println(lists);
@@ -102,7 +102,7 @@ public class Quiz_Customer {
 				continue;
 			case 3:
 				System.out.println("------------- 고객 리스트 출력-------------");				
-				for (Customer item : lists) {
+				for (Customers item : lists) {
 					System.out.println(item);
 				}				
 				System.out.println("추가 완료");
